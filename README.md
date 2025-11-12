@@ -1,14 +1,18 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with React and Vite.
+A modern, responsive portfolio website built with React and Vite. Features a clean component architecture, smooth scroll animations, and vibrant green-themed design.
 
 ## Features
 
-- 🎨 Modern, clean design
-- 📱 Fully responsive
-- ⚡ Fast development with Vite
-- 🎯 Sections: Hero, About, Projects, Skills, Contact
-- 🎭 Smooth scrolling navigation
+- 🎨 Modern, vibrant design with animated gradients
+- 📱 Fully responsive across all devices
+- ⚡ Fast development and build with Vite
+- 🏗️ Modular component architecture
+- 🎭 Smooth scroll animations using Intersection Observer
+- 🎯 Complete sections: Hero, About, Work, Passions, Skills, Contact
+- 🖼️ Interactive photo gallery with modal viewer
+- 📊 Animated skill progress bars
+- 🎨 Custom geometric shapes and decorative elements
 
 ## Getting Started
 
@@ -19,17 +23,19 @@ A modern, responsive portfolio website built with React and Vite.
 
 ### Installation
 
-1. Install dependencies:
+1. Clone the repository and navigate to the project directory
+
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Start the development server:
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-3. Open your browser and navigate to `http://localhost:5173`
+4. Open your browser and navigate to `http://localhost:5173`
 
 ### Building for Production
 
@@ -48,20 +54,82 @@ npm run preview
 ```
 portfolio_website/
 ├── src/
-│   ├── App.jsx          # Main app component
-│   ├── App.css          # App styles
-│   ├── main.jsx         # Entry point
-│   └── index.css        # Global styles
-├── index.html           # HTML template
-├── vite.config.js       # Vite configuration
-└── package.json         # Dependencies
+│   ├── components/          # React components
+│   │   ├── Navbar.jsx       # Navigation bar
+│   │   ├── Hero.jsx         # Hero section
+│   │   ├── About.jsx        # About section
+│   │   ├── Work.jsx         # Work experience & projects
+│   │   ├── Passions.jsx     # Personal interests gallery
+│   │   ├── Skills.jsx       # Skills with progress bars
+│   │   ├── Contact.jsx      # Contact section
+│   │   ├── Footer.jsx       # Footer component
+│   │   ├── ImageModal.jsx   # Image modal viewer
+│   │   └── README.md        # Component documentation
+│   ├── hooks/               # Custom React hooks
+│   │   ├── useScrollAnimation.js  # Scroll animation hook
+│   │   └── README.md        # Hooks documentation
+│   ├── App.jsx              # Main app component
+│   ├── App.css              # Organized component styles
+│   ├── main.jsx             # Entry point
+│   └── index.css            # Global styles & CSS variables
+├── index.html               # HTML template
+├── vite.config.js           # Vite configuration
+├── package.json             # Dependencies & scripts
+└── README.md                # Project documentation
 ```
+
+## Component Architecture
+
+The application follows a modular component structure for maintainability and scalability:
+
+- **Layout Components**: Navbar, Footer
+- **Section Components**: Hero, About, Work, Passions, Skills, Contact
+- **Utility Components**: ImageModal
+- **Custom Hooks**: useScrollAnimation for scroll-triggered animations
+
+Each component is self-contained and can be easily customized or replaced.
+
+## Customization
+
+### Updating Content
+
+1. **Personal Information**: Edit text directly in component files
+2. **Work Experience**: Update the `workExperience` array in `Work.jsx`
+3. **Skills**: Modify the `skills` array in `Skills.jsx`
+4. **Contact Links**: Update the `contactLinks` array in `Contact.jsx`
+5. **Passions**: Modify the `passionCategories` array in `Passions.jsx`
+
+### Styling
+
+- **Colors**: Update CSS variables in `src/index.css`
+- **Layout**: Modify styles in `src/App.css` (organized by section)
+- **Animations**: Adjust timing and easing in animation keyframes
+
+### Images
+
+Place your images in the `public` directory:
+- Headshot: `/headshot.jpg`
+- Gallery images: `/gallery/{category}/{filename}.jpg`
 
 ## Technologies Used
 
-- React 18
-- Vite
-- CSS3 (no external CSS frameworks)
+- **React 18** - UI library
+- **Vite** - Build tool and dev server
+- **CSS3** - Styling with custom properties
+- **Intersection Observer API** - Scroll animations
+
+## Performance Features
+
+- Lazy loading of animations
+- Optimized Intersection Observer usage
+- CSS transforms for smooth animations
+- Unobserving elements after animation triggers
+
+## Browser Support
+
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+- Responsive design from 320px to 4K displays
 
 ## License
 
