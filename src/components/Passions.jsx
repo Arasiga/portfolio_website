@@ -2,33 +2,41 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const passionCategories = [
   {
-    id: 'exploring',
-    title: '🌍 Exploring',
-    description: 'I love traveling and discovering new places, cultures, and experiences around the world.',
-    images: ['photo1.jpg', 'photo2.jpg', 'photo3.jpg'],
+    id: 'outdoor-adventure',
+    title: '🏔️ Outdoor Adventure',
+    description: 'I thrive in the great outdoors—whether it\'s skiing down mountains, hiking scenic trails, backpacking through wilderness, camping under the stars, sailing on open water, or fishing in peaceful lakes. Nature is where I find my balance. Below are some captures from my outdoor adventures.',
+    images: ['panorama_ridge.jpg', 'skiing_sunset.jpg', 'WCT_hiking.jpg', 'snow_camping.jpg'],
   },
   {
-    id: 'sports',
-    title: '⚽ Sports',
-    description: 'Staying active through various sports and physical activities keeps me energized and focused.',
-    images: ['photo1.jpg', 'photo2.jpg', 'photo3.jpg'],
+    id: 'action-sports',
+    title: '⚡ Sports & Fitness',
+    description: 'Staying active is a core part of my lifestyle. From mountain biking challenging trails and playing competitive soccer, to off-roading adventures and hitting the gym regularly, I love pushing my limits and staying fit. Check out some highlights from my athletic pursuits.',
+    images: ['road_biking.jpg', 'porto_biking.jpg', 'mtb.jpg'],
   },
   {
-    id: 'nature',
-    title: '🌲 Nature',
-    description: 'Connecting with nature through hiking, camping, and outdoor adventures brings me peace and inspiration.',
-    images: ['photo1.jpg', 'photo2.jpg', 'photo3.jpg'],
+    id: 'creative-pursuits',
+    title: '🎨 Creative & Cultural',
+    description: (
+      <>
+        I enjoy expressing creativity through various outlets—creating video content of my adventures (p.s. check out my recent{' '}
+        <a href="https://www.youtube.com/watch?v=M8cvRECdBfk" target="_blank" rel="noopener noreferrer" className="passion-link">sailing adventure</a>, or my{' '}
+        <a href="https://www.youtube.com/watch?v=dW_lp-IAcu8" target="_blank" rel="noopener noreferrer" className="passion-link">ski trip in Revelstoke</a>), 
+        working on DIY projects like car maintenance and home improvements, experiencing live music festivals, travelling to new places, 
+        and unwinding with video games. Here are a few moments I've captured along the way.
+      </>
+    ),
+    images: ['fall_in_paris.jpg', 'tomorrowland.jpg', 'car_DIY.jpg'],
   },
 ];
 
-function GalleryItem({ category, index, onClick }) {
-  const imagePath = `/gallery/${category}/${index}`;
+function GalleryItem({ imageFileName, category, onClick }) {
+  const imagePath = `/${imageFileName}`;
   
   return (
     <div className="gallery-item" onClick={() => onClick(imagePath)}>
       <img
         src={imagePath}
-        alt={`${category} ${index}`}
+        alt={`${category} photo`}
         onError={(e) => {
           e.target.style.display = 'none';
           const placeholder = e.target.nextElementSibling;
@@ -36,7 +44,7 @@ function GalleryItem({ category, index, onClick }) {
         }}
       />
       <div className="gallery-placeholder" style={{ display: 'none' }}>
-        Photo {index}
+        {imageFileName}
       </div>
     </div>
   );
@@ -57,8 +65,9 @@ export default function Passions({ onImageClick }) {
         
         <div ref={passionsRef} className={`passions-content ${passionsVisible ? 'animate-in' : ''}`}>
           <p className="passions-intro">
-            Outside of coding, I'm passionate about exploring the world, staying active through sports,
-            and connecting with nature. Here's a glimpse into what I love doing in my free time.
+            Beyond software engineering, I'm driven by adventure and creativity. Whether I'm conquering mountain trails,
+            building something with my hands, or capturing moments on camera, I believe in living life to the fullest.
+            Here's a glimpse into what fuels my passion outside of work.
           </p>
           
           {passionCategories.map((passion) => (
@@ -70,8 +79,8 @@ export default function Passions({ onImageClick }) {
                 {passion.images.map((img, index) => (
                   <GalleryItem
                     key={index}
+                    imageFileName={img}
                     category={passion.id}
-                    index={img}
                     onClick={onImageClick}
                   />
                 ))}

@@ -125,13 +125,15 @@
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   border: 5px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.2);
 }
 
 .headshot-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.25);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -583,10 +585,39 @@
   margin-bottom: 1rem;
 }
 
+.company-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.company-link:hover {
+  color: var(--teal-color);
+  border-bottom-color: var(--teal-color);
+}
+
 .work-description {
   color: var(--text-light);
   line-height: 1.6;
   margin-bottom: 1rem;
+}
+
+.work-bullets {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.work-bullets li {
+  margin-bottom: 0.5rem;
+}
+
+.work-bullets li:last-child {
+  margin-bottom: 0;
 }
 
 /* Work Tags */
@@ -692,6 +723,23 @@
   line-height: 1.6;
 }
 
+.project-bullets {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.project-bullets li {
+  margin-bottom: 0.4rem;
+}
+
+.project-bullets li:last-child {
+  margin-bottom: 0;
+}
+
 .project-links {
   display: flex;
   gap: 1rem;
@@ -795,17 +843,35 @@
   margin-bottom: 2rem;
 }
 
+.passion-link {
+  color: var(--green-600);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.passion-link:hover {
+  color: var(--teal-color);
+  border-bottom-color: var(--teal-color);
+}
+
 /* Photo Gallery */
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+  justify-items: center;
+  align-items: center;
 }
 
 .gallery-item {
   position: relative;
   aspect-ratio: 1;
+  width: 100%;
+  max-width: 400px;
   border-radius: 0.75rem;
   overflow: hidden;
   cursor: pointer;
@@ -834,7 +900,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .gallery-item:hover img {

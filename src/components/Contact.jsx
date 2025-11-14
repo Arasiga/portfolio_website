@@ -1,10 +1,9 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const contactLinks = [
-  { id: 'email', icon: '📧', label: 'Email', href: 'mailto:your.email@example.com' },
-  { id: 'linkedin', icon: '💼', label: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile' },
-  { id: 'github', icon: '💻', label: 'GitHub', href: 'https://github.com/yourusername' },
-  { id: 'twitter', icon: '🐦', label: 'Twitter', href: 'https://twitter.com/yourhandle' },
+  { id: 'email', icon: '📧', label: 'Email', href: 'mailto:alex.rasiga@gmail.com' },
+  { id: 'linkedin', icon: '💼', label: 'LinkedIn', href: 'https://www.linkedin.com/in/alex-rasiga-b3b599119/' },
+  { id: 'github', icon: '💻', label: 'GitHub', href: 'https://github.com/Arasiga' },
 ];
 
 export default function Contact() {
@@ -20,7 +19,7 @@ export default function Contact() {
         </h2>
         
         <p className={`contact-description ${contactVisible ? 'animate-in' : ''}`}>
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out to me via email or LinkedIn.
         </p>
         
         <div ref={contactRef} className={`contact-links ${contactVisible ? 'animate-in' : ''}`}>

@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="hero-headshot">
           <img
             src="/headshot.jpg"
-            alt="Your Name"
+            alt="Alex Rasiga"
             className="headshot-image"
             onError={(e) => {
               e.target.style.display = 'none';
@@ -25,17 +25,13 @@ export default function Hero() {
         </div>
         
         <h1 className="hero-title">
-          Hi, I'm <span className="highlight">Your Name</span>
+          Hey, I'm <span className="highlight">Alex Rasiga</span>
         </h1>
         
-        <p className="hero-subtitle">Full Stack Developer & Creative Problem Solver</p>
-        
-        <p className="hero-description">
-          I build beautiful, functional web applications that solve real-world problems.
-        </p>
+        <p className="hero-subtitle">Software Engineer & Creative Problem Solver</p>
         
         <div className="hero-buttons">
-          <a href="#projects" className="btn btn-primary">View My Work</a>
+          <a href="#work" className="btn btn-primary">View My Work</a>
           <a href="#contact" className="btn btn-secondary">Get In Touch</a>
         </div>
       </div>
