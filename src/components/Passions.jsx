@@ -4,28 +4,27 @@ const passionCategories = [
   {
     id: 'outdoor-adventure',
     title: '🏔️ Outdoor Adventure',
-    description: 'I thrive in the great outdoors—whether it\'s skiing down mountains, hiking scenic trails, backpacking through wilderness, camping under the stars, sailing on open water, or fishing in peaceful lakes. Nature is where I find my balance. Below are some captures from my outdoor adventures.',
+    description: 'I thrive in the great outdoors. Whether it\'s skiing down mountains, hiking scenic trails, backpacking through the wilderness, or camping under the stars, nature is where I find my balance. Here are some captures from my adventures.',
     images: ['panorama_ridge.jpg', 'skiing_sunset.jpg', 'WCT_hiking.jpg', 'snow_camping.jpg'],
   },
   {
     id: 'action-sports',
     title: '⚡ Sports & Fitness',
-    description: 'Staying active is a core part of my lifestyle. From mountain biking challenging trails and playing competitive soccer, to off-roading adventures and hitting the gym regularly, I love pushing my limits and staying fit. Check out some highlights from my athletic pursuits.',
-    images: ['road_biking.jpg', 'porto_biking.jpg', 'mtb.jpg'],
+    description: 'Staying active is a core part of my lifestyle. From mountain biking challenging trails and playing competitive soccer to off-roading adventures and hitting the gym, I love pushing my limits. Here are some highlights from my athletic pursuits.',
+    images: ['road_biking.jpg', 'porto_biking.jpg', 'mtb.jpg', 'backpacking.jpg'],
   },
   {
     id: 'creative-pursuits',
     title: '🎨 Creative & Cultural',
     description: (
       <>
-        I enjoy expressing creativity through various outlets—creating video content of my adventures (p.s. check out my recent{' '}
-        <a href="https://www.youtube.com/watch?v=M8cvRECdBfk" target="_blank" rel="noopener noreferrer" className="passion-link">sailing adventure</a>, or my{' '}
-        <a href="https://www.youtube.com/watch?v=dW_lp-IAcu8" target="_blank" rel="noopener noreferrer" className="passion-link">ski trip in Revelstoke</a>), 
-        working on DIY projects like car maintenance and home improvements, experiencing live music festivals, travelling to new places, 
-        and unwinding with video games. Here are a few moments I've captured along the way.
+        My creative outlets include producing videos of my adventures (like this{' '}
+        <a href="https://www.youtube.com/watch?v=M8cvRECdBfk" target="_blank" rel="noopener noreferrer" className="passion-link">sailing trip</a>, or a{' '}
+        <a href="https://www.youtube.com/watch?v=dW_lp-IAcu8" target="_blank" rel="noopener noreferrer" className="passion-link">ski trip to Revelstoke</a>), 
+        working on DIY car and home projects, attending music festivals, and traveling. Here are a few moments from those pursuits.
       </>
     ),
-    images: ['fall_in_paris.jpg', 'tomorrowland.jpg', 'car_DIY.jpg'],
+    images: ['fall_in_paris.jpg', 'tomorrowland.jpg', 'car_DIY.jpg', 'sailing.jpg'],
   },
 ];
 
