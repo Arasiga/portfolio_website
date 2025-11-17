@@ -29,12 +29,10 @@ const passionCategories = [
 ];
 
 function GalleryItem({ imageFileName, category, onClick }) {
-  const imagePath = `/${imageFileName}`;
-  
   return (
-    <div className="gallery-item" onClick={() => onClick(imagePath)}>
+    <div className="gallery-item" onClick={() => onClick(imageFileName)}>
       <img
-        src={imagePath}
+        src={imageFileName}
         alt={`${category} photo`}
         onError={(e) => {
           e.target.style.display = 'none';
