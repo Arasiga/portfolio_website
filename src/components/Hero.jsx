@@ -1,3 +1,5 @@
+import headshot from '/headshot.jpg';
+
 export default function Hero() {
   return (
     <section id="home" className="hero">
@@ -11,7 +13,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-headshot">
           <img
-            src="/headshot.jpg"
+            src={headshot}
             alt="Alex Rasiga"
             className="headshot-image"
             onError={(e) => {
